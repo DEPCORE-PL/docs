@@ -1,0 +1,13 @@
+node_modules/
+.vscode/
+/vscode/
+**/logs
+*.mp4
+*.mov
+*afdesign*
+/assets/js/main.js
+/assets/js/main.min.js
+/assets/css/main.min.css
+/assets/css/main.css
+package-lock.json
+ftp-sync.json

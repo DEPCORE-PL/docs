@@ -1,0 +1,18 @@
+.site-header {
+    --headroom-translate: -200%;
+    top: 0;
+
+    .inner {
+        width: min(var(--size-container), var(--size-container-max));
+        margin-inline: auto;
+
+        display: grid;
+        column-gap: var(--gap);
+        row-gap: var(--space-3xs);
+        grid-template-areas:
+            "brand top"
+            "brand nav";
+        grid-template-columns: min-content 1fr;
+        justify-items: end;
+    }
+}

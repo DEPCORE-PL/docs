@@ -1,0 +1,44 @@
+.site-footer {
+    display: grid;
+    gap: var(--gap);
+    grid-template-areas:
+        "info"
+        "contactinfo"
+        "nav"
+        "copyright"
+        "designer";
+
+    @media screen and (min-width: $size-mobile) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "info nav contactinfo"
+            "copyright copyright copyright"
+            "designer designer designer";
+    }
+
+    .copyright {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    .copyright {
+        grid-area: copyright;
+    }
+
+    .designer {
+        grid-area: designer;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .footer-nav {
+        grid-area: nav;
+    }
+}

@@ -1,0 +1,82 @@
+.icon {
+    width: var(--icon-size, 48px);
+    height: var(--icon-size, 48px);
+    min-width: var(--icon-size, 48px);
+}
+
+.icon-xs {
+    --icon-size: var(--icon-size-xs, 32px);
+}
+
+.icon-2xs {
+    --icon-size: var(--icon-size-2xs, 28px);
+}
+
+.icon-3xs {
+    --icon-size: var(--icon-size-3xs, 24px);
+}
+
+.icon-4xs {
+    --icon-size: var(--icon-size-4xs, 20px);
+}
+
+.icon-5xs {
+    --icon-size: var(--icon-size-5xs, 16px);
+}
+
+.icon-s {
+    --icon-size: var(--icon-size-s, 32px);
+}
+
+.icon-m {
+    --icon-size: var(--icon-size-m, 48px);
+}
+
+.icon-l {
+    --icon-size: var(--icon-size-l, 64px);
+}
+
+.icon-xl {
+    --icon-size: var(--icon-size-xl, 96px);
+}
+
+.icon-2xl {
+    --icon-size: var(--icon-size-2xl, 128px);
+}
+
+.icon-3xl {
+    --icon-size: var(--icon-size-3xl, 192px);
+}
+
+.icon-4xl {
+    --icon-size: var(--icon-size-4xl, 256px);
+}
+
+.stroke-s {
+    --stroke-width: 1.3px;
+    --stroke-linejoin: miter;
+    --stroke-miterlimit: 10;
+}
+.stroke-m {
+    --stroke-width: 2px;
+    --stroke-linejoin: miter;
+    --stroke-miterlimit: 10;
+}
+
+.stroke-l {
+    --stroke-width: 4px;
+    --stroke-linejoin: miter;
+    --stroke-miterlimit: 10;
+}
+
+.stroke-xl {
+    --stroke-width: 6px;
+    --stroke-linejoin: miter;
+    --stroke-miterlimit: 10;
+}
+
+.stroke-2xl {
+    --stroke-width: 8px;
+    --stroke-linejoin: miter;
+    --stroke-miterlimit: 10;
+}

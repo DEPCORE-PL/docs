@@ -1,0 +1,141 @@
+/* Self hosted fonts */
+@font-face {
+    font-family: "Trenda";
+    src: url("../fonts/35EA72_0_0.woff2") format("woff2");
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Trenda";
+    src: url("../fonts/35EA72_1_0.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Trenda";
+    src: url("../fonts/35EA72_3_0.woff2") format("woff2");
+    font-display: swap;
+}
+
+/*  Structure */
+$size-mobile: 760px;
+
+:root {
+    interpolate-size: allow-keywords;
+    --s-mobile: 760px;
+    --scroll-padding: 87px;
+    --size-outer-container: 100em;
+    --size-container-max: 95vw;
+    --size-container-default: 80em;
+    --size-container: var(--size-container-default);
+    --h-header-mobile: 50px;
+
+    --c-primary-h: 0;
+    --c-primary-s: 0%;
+    --c-primary-l: 0%;
+
+    --c-secondary-h: 0;
+    --c-secondary-s: 0%;
+    --c-secondary-l: 0%;
+    --c-gray: hsl(0, 0%, 46%);
+    --c-muted: hsl(0, 0%, 92%);
+
+    --c-border: hsl(0, 0%, 85%);
+
+    --c-action-h: 50;
+    --c-action-s: 100%;
+    --c-action-l: 50%;
+
+    --bg-hr: var(--c-accent);
+
+    --fz-base: 16px;
+    --fz-base-mobile: 16px;
+    --ff-text: "Trenda";
+    --ff-headings: "Trenda";
+
+    --c-headings-h:0;
+    --c-headings-s:0%;
+    --c-headings-l:7%;
+    --c-headings:hsl(var(--c-headings-h, 0),var(--c-headings-s, 0%),var(--c-headings-l, 7%));
+    --m-body: 0;
+    --p-body: 0;
+
+    --c-white: hsl(0, 0%, 100%);
+    --c-text: hsl(0, 0%, 7%);
+    --lh-text: 150%;
+
+    --o-sun: 0;
+    --o-moon: 1;
+
+    --bg-selection: var(--c-accent);
+    --c-selection: #fcfcfc;
+
+    --bg-header: var(--c-white);
+    --bg-body: #fff;
+    --icon-fill: var(--c-text);
+
+    --icon-accent: hsl(var(--c-action-h), var(--c-action-s), var(--c-action-l));
+
+    --bgc-scrollbar: #ccc;
+    --c-accent: hsl(var(--c-action-h), var(--c-action-s), var(--c-action-l));
+
+    --td-menu-transform: 500ms;
+    --td-menu-box-shadow: 300ms;
+
+    --c-action: hsl(var(--c-action-h), var(--c-action-s), var(--c-action-l));
+
+    --bd-input: 2px solid var(--c-text);
+    --bd-input-active: 2px solid var(--c-action);
+    --bdrs-input: 7px;
+
+    /**
+        scale 1340 at 16px
+        320px at 12px;
+     */
+    --step--2: clamp(0.61rem, calc(0.6rem + 0.05vw), 0.64rem);
+    --step--1: clamp(0.73rem, calc(0.71rem + 0.11vw), 0.8rem);
+    --step-0: clamp(0.88rem, calc(0.84rem + 0.2vw), 1rem);
+    --step-1: clamp(1.05rem, calc(0.99rem + 0.31vw), 1.25rem);
+    --step-2: clamp(1.26rem, calc(1.17rem + 0.47vw), 1.56rem);
+    --step-3: clamp(1.51rem, calc(1.37rem + 0.69vw), 1.95rem);
+    --step-4: clamp(1.81rem, calc(1.62rem + 0.98vw), 2.44rem);
+    --step-5: clamp(2.18rem, calc(1.9rem + 1.37vw), 3.05rem);
+
+    --fz-huge: calc(3 * var(--step-5));
+    --fz-h1: var(--step-5);
+    --fz-h2: var(--step-4);
+    --fz-h3: var(--step-3);
+    --fz-h4: var(--step-2);
+    --fz-h5: var(--step-1);
+    --fz-small: var(--step--1);
+
+    --space-3xs: clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem);
+    --space-2xs: clamp(0.44rem, calc(0.42rem + 0.1vw), 0.5rem);
+    --space-xs: clamp(0.69rem, calc(0.67rem + 0.1vw), 0.75rem);
+    --space-s: clamp(0.88rem, calc(0.84rem + 0.2vw), 1rem);
+    --space-m: clamp(1.31rem, calc(1.25rem + 0.29vw), 1.5rem);
+    --space-l: clamp(1.75rem, calc(1.67rem + 0.39vw), 2rem);
+    --space-xl: clamp(2.63rem, calc(2.51rem + 0.59vw), 3rem);
+    --space-2xl: clamp(3.5rem, calc(3.34rem + 0.78vw), 4rem);
+    --space-3xl: clamp(5.25rem, calc(5.01rem + 1.18vw), 6rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.17rem + 0.39vw), 0.5rem);
+    --space-2xs-xs: clamp(0.44rem, calc(0.34rem + 0.49vw), 0.75rem);
+    --space-xs-s: clamp(0.69rem, calc(0.59rem + 0.49vw), 1rem);
+    --space-s-m: clamp(0.88rem, calc(0.68rem + 0.98vw), 1.5rem);
+    --space-m-l: clamp(1.31rem, calc(1.1rem + 1.08vw), 2rem);
+    --space-l-xl: clamp(1.75rem, calc(1.36rem + 1.96vw), 3rem);
+    --space-xl-2xl: clamp(2.63rem, calc(2.19rem + 2.16vw), 4rem);
+    --space-2xl-3xl: clamp(3.5rem, calc(2.72rem + 3.92vw), 6rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(0.88rem, calc(0.52rem + 1.76vw), 2rem);
+
+    --gap: var(--space-m);
+    --w-widget: 15rem;
+
+    --bxsh-base: 0 0 20px hsl(0 0% 0% / 0.1);
+}

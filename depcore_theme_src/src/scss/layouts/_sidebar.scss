@@ -1,0 +1,12 @@
+.grid-sidebar-layout {
+    @media screen and (min-width: $size-mobile) {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.grid-sidebar {
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--w-widget, 15rem), 1fr)
+    );
+}

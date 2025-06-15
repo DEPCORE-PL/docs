@@ -1,0 +1,17 @@
+site_name: My Docs
+
+theme:
+  name: null
+  custom_dir: 'depcore_theme'
+  include_search_page: true
+  locale: en
+repo_url: https://github.com/example/repository/
+
+
+plugins:
+  - search
+  - multirepo:
+      repos:
+        - section: Backstage
+          # you can define the edit uri path
+          import_url: 'https://github.com/backstage/backstage?edit_uri=/blob/master/'

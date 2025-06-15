@@ -1,0 +1,44 @@
+.outer,
+.inner {
+    display: grid;
+    width: min(var(--size-container), var(--size-container-max));
+    margin-inline: auto;
+    place-content: center;
+
+    @media screen and (min-width: $size-mobile) {
+        gap: var(--space-l);
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.outer {
+    grid-template-areas:
+        "content"
+        "image";
+    @media screen and (min-width: $size-mobile) {
+        grid-template-areas: "content image";
+    }
+}
+
+.outer {
+    --size-container: var(--size-outer-container);
+    @include container;
+}
+
+.inner {
+    grid-area: content / image;
+}
+
+.image {
+    grid-area: image;
+}
+
+.inner {
+    --size-container: var(--size-container-default);
+    grid-column: 1/-1;
+    justify-self: center;
+
+    .content {
+        max-width: calc(var(--size-container) / 2);
+    }
+}

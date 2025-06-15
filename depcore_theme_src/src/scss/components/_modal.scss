@@ -1,0 +1,33 @@
+.modal-dialog {
+    @extend %wrapper;
+    width: 100%;
+    background-color: var(--color-white);
+    position: absolute;
+    box-shadow: var(--box-shadow);
+
+    .modal-header {
+        background-color: var(--color-brand-secondary);
+        color: var(--color-white);
+        padding: 0.5rem 2rem;
+        font-size: rem(14px);
+        letter-spacing: 0.05em;
+    }
+    .close {
+        position: absolute;
+        right: 0;
+        background-color: inherit;
+        padding: 0.5rem;
+        box-shadow: none;
+        border: none;
+    }
+    .modal-title {
+        color: inherit;
+    }
+
+    .modal-body {
+        padding: 2rem;
+    }
+    .modal-footer {
+        display: none;
+    }
+}

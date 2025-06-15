@@ -1,0 +1,33 @@
+.alert {
+    background-color: var(--bgc-alert, var(--c-text));
+    color: var(--c-text-alert, #fff);
+    border-radius: var(--bdrs-alert, var(--bdrs-base, 7px));
+    display: flex;
+    --c-headings-l: 100%;
+    padding: var(--space-m);
+    margin-block: var(--space-m);
+    gap: var(--space-xl);
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    flex-wrap: wrap;
+    --c-text-l:100%;
+
+    figure {
+        flex-basis: var(--_cta-figure-basis, 25%);
+    }
+
+    .close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    ::marker {
+        color: var(--c-action, #fff);
+    }
+}

@@ -1,0 +1,14 @@
+.booking-section {
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        background-color: #fff;
+        z-index: 99;
+        position: absolute;
+        height: 50px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}

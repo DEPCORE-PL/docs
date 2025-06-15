@@ -1,0 +1,33 @@
+.hero {
+
+    .content section {
+        align-self: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    figure {
+        margin-inline: auto;
+        max-width: 94vw;
+
+        @media screen and (min-width: $size-mobile){
+            max-width: 60vw;
+        }
+
+        @media screen and (max-width: $size-mobile) {
+            margin-block-start: var(--space-m);
+            max-height: 300px;
+        }
+
+        &.animation{
+            aspect-ratio: 628 /580;
+        }
+    }
+    img,svg{
+        max-height: 100%;
+        object-fit: contain
+    }
+}
+@import "hero/_text_and_image";

@@ -1,0 +1,73 @@
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-justify {
+    text-align: justify;
+}
+
+.u-text-uppercase {
+    text-transform: uppercase;
+}
+
+.u-text-capitalize {
+    text-transform: capitalize;
+}
+
+.u-text-lowercase {
+    text-transform: lowercase;
+}
+
+.u-text-nowrap {
+    white-space: nowrap;
+}
+
+.u-text-break {
+    word-break: break-word;
+}
+
+.u-text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.u-text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.u-text-clip {
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.u-text-hide {
+    @extend %visually-hidden;
+}
+
+.u-text-hide-focusable {
+    &:focus,
+    &:active {
+        @extend %visually-hidden;
+    }
+}
+
+.u-text-hide-visually {
+    @extend %visually-hidden;
+}
+
+.u-text-hide-visually-focusable {
+    &:focus,
+    &:active {
+        @extend %visually-hidden;
+    }
+}

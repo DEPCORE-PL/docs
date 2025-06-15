@@ -1,0 +1,145 @@
+.form-group,
+.ml-field-group {
+    margin-bottom: var(--space-s);
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: var(--space-3xs);
+    color: var(--c-label, var(--c-text));
+
+    &.legal {
+        text-transform: none;
+        font-size: var(--fz-small);
+        font-weight: normal;
+        display: inline-block;
+        color: var(--c-muted, #ccc);
+
+        a {
+            font-size: inherit;
+            font-weight: bold;
+        }
+    }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    &[type="text"],
+    &[type="password"],
+    &[type="phone"],
+    &[type="tel"],
+    &[type="number"],
+    &[type="search"],
+    &[type="url"],
+    &[type="date"],
+    &[type="month"],
+    &[type="week"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="email"] {
+        @extend %input;
+    }
+    &[type="color"] {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: auto 55%;
+    padding-left: 30px;
+
+    &::placeholder{
+        font-size: var(--fz-small);
+    }
+}
+
+input:not(:placeholder-shown):invalid,
+input:user-invalid {
+    outline-color: var(--c-error, #f00);
+    background-image: url(../images/icons/input-invalid.svg);
+}
+
+input:not(:placeholder-shown):valid,
+input:user-valid {
+    outline-color: var(--c-success, var(--c-action));
+    background-image: url(../images/icons/input-valid.svg);
+}
+
+input:focus:invalid {
+    outline-color: var(--c-warning, orange);
+}
+
+select {
+    @extend %input;
+}
+
+textarea {
+    @extend %input;
+    max-width: 90vw;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    z-index: 0;
+    transform: scale(0);
+    display: block;
+
+    & + label {
+        padding-left: 30px;
+        @include before-content;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            background-color: #fff;
+            display: inline-block;
+            top: 0;
+        }
+
+        &:before {
+            width: 30px;
+            height: 30px;
+            left: 0;
+        }
+
+        &:before {
+            border-radius: 2px;
+            border: 1px solid var(--c-text);
+            height: 15px;
+            width: 15px;
+            transition: background-color 300ms ease;
+        }
+    }
+
+    &:checked + label:before {
+        background-color: var(--c-action);
+    }
+}
+
+input[type="radio"] + label:before {
+    border-radius: 50%;
+}
+
+.ml-error label {
+    color: red;
+}
+
+.error-message {
+    visibility: hidden;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: var(--space-3xs);
+
+    .ml-error & {
+        visibility: visible;
+    }
+}

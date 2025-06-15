@@ -1,0 +1,35 @@
+.icon-box {
+    display: flex;
+    --icon-stroke-width: 2;
+    gap: var(--space-xs);
+
+    strong {
+        color: hsl(
+            var(--c-headings-h, 0),
+            var(--c-headings-s, 0%),
+            var(--c-headings-l, 7%)
+        );
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.icon-box-inline {
+    align-items: center;
+}
+
+.contact-box {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    svg,
+    figure {
+        flex-basis: 30%;
+        min-width: var(--miw-contact-box-icon, 30px);
+        max-width: var(--maw-contact-box-icon, 35px);
+        margin-right: var(--space-xs);
+    }
+}

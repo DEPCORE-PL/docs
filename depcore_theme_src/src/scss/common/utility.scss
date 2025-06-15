@@ -1,0 +1,37 @@
+.df {
+    display: flex;
+    gap: var(--gap, var(--space-m));
+    flex-wrap: wrap;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+
+// .image-and-text {
+//     display: flex;
+//     gap: var(--gap, var(--space-m));
+//     align-items: center;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+
+//     img {
+//         width: auto;
+//         display: block;
+//         margin-inline: auto;
+//     }
+
+//     @media screen and (max-width: $size-mobile) {
+//         &.section {
+//             margin-top: var(--space-m);
+//         }
+
+//         img {
+//             max-height: 40vh;
+//         }
+//     }
+// }

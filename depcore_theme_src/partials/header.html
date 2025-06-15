@@ -1,0 +1,28 @@
+<header class="site-header" id="masthead">
+	<div class="inner">
+		{% include 'partials/logo.html' %}
+		<div class="toggable">
+			<nav class="main-navigation">
+				<ul>
+					<li>
+						<div role="search">
+							<form action="{{ 'search.html'|url }}" method="get">
+								<input type="search" name="q" placeholder="Search docs" />
+							</form>
+						</div>
+					</li>
+					<li>
+						<div class="hidden">
+							{% if page and page.edit_url %}
+							<a href="{{ page.edit_url }}">{{ config.repo_name }}</a>
+							{% elif config.repo_url %}
+							<a href="{{ config.repo_url }}">{{ config.repo_name }}</a>
+							{% endif %}
+
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
