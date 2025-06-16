@@ -11,6 +11,6 @@ plugins:
   - search
   - multirepo:
       repos:
-        - section: Backstage
+        - section: "Turnstile Plugin"
           # you can define the edit uri path
-          import_url: 'https://github.com/backstage/backstage?edit_uri=/blob/master/'
+          import_url: https://github.com/DEPCORE-PL/oc-turnstile-plugin

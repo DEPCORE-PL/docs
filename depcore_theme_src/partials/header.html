@@ -14,12 +14,12 @@
 					<li>
 						<div class="hidden">
 							{% if page and page.edit_url %}
-							<a href="{{ page.edit_url }}">{{ config.repo_name }}</a>
+								<a href="{{ page.edit_url }}">{{ config.repo_name }}</a>
 							{% elif config.repo_url %}
-							<a href="{{ config.repo_url }}">{{ config.repo_name }}</a>
+								<a href="{{ config.repo_url }}">edit</a>
 							{% endif %}
-
 						</div>
+						
 					</li>
 				</ul>
 			</nav>

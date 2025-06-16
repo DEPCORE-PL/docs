@@ -1,73 +1,65 @@
-# Welcome to Sample Project Official Documentation
+# DEPCORE Docs - Centrum Dokumentacji i API
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Witaj w oficjalnym centrum dokumentacji DEPCORE! Znajdziesz tutaj kompleksową dokumentację techniczną wszystkich naszych autorskich rozwiązań, wtyczek i motywów, które tworzymy dla systemów WordPress i OctoberCMS. DEPCORE Docs to miejsce, gdzie programiści, projektanci i właściciele biznesów mogą znaleźć szczegółowe informacje o naszych produktach oraz sposobach ich wykorzystania.
 
-## Commands
+DEPCORE to firma technologiczna specjalizująca się w tworzeniu zaawansowanych rozwiązań internetowych. Od początku naszej działalności skupiamy się na dostarczaniu wysokiej jakości produktów, które pomagają naszym klientom osiągać realne cele biznesowe. Nasze doświadczenie w tworzeniu stron internetowych, sklepów online oraz aplikacji webowych przekłada się na rozwój autorskich wtyczek i motywów, które usprawniają pracę z popularnymi systemami CMS.
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+W tej dokumentacji znajdziesz nie tylko szczegółowe opisy techniczne naszych produktów, ale również przewodniki implementacji, przykłady użycia oraz najlepsze praktyki. Dokumentacja jest stale aktualizowana wraz z rozwojem naszych rozwiązań, aby zapewnić Ci zawsze aktualne i dokładne informacje.
 
-!!! info  
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.
+## Nasza Filozofia
 
-## Bash
+W DEPCORE wierzymy, że technologia powinna służyć biznesowi, a nie odwrotnie. Dlatego nasze rozwiązania są tworzone z myślą o rzeczywistych potrzebach przedsiębiorców i ich klientów. Każda nasza wtyczka i motyw powstaje w oparciu o dogłębną analizę potrzeb rynku oraz wieloletnie doświadczenie w realizacji projektów internetowych.
 
-```bash
-# Minimal makefile for Sphinx documentation
-#
+## Nasze Specjalizacje
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+💼 **Kompleksowe rozwiązania dla Twojego biznesu:**
+- Nowoczesne strony internetowe, które przyciągają klientów
+- Sklepy internetowe, które zwiększają sprzedaż
+- Aplikacje webowe automatyzujące procesy biznesowe
+- Zaawansowane rozwiązania WordPress i OctoberCMS
+- Systemy zarządzania treścią dostosowane do Twoich potrzeb
 
-# Put it first so that "make" without argument is like "make help".
-help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+## Rozwiązania Szyte na Miarę
 
-.PHONY: help Makefile
+🎯 **Tworzymy rozwiązania, które:**
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+- Automatycznie dostosowują się do każdego urządzenia
+- Są zoptymalizowane pod kątem wyszukiwarek (SEO)
+- Zapewniają najwyższy poziom bezpieczeństwa
+- Łatwo się integrują z popularnymi narzędziami biznesowymi
+- Pozwalają samodzielnie zarządzać treścią
 
+## Technologie, Którym Możesz Zaufać
 
-```
+⚡ **WordPress - Najpopularniejszy CMS na świecie**
+- Intuicyjny panel administracyjny
+- Tysiące gotowych rozszerzeń
+- Łatwa integracja z mediami społecznościowymi
+- Regularne aktualizacje zabezpieczeń
 
-## Syntax highlighting Example
+🔥 **OctoberCMS - Nowoczesne rozwiązanie dla wymagających**
+- Błyskawiczna wydajność
+- Zaawansowane możliwości dostosowania
+- Przyjazny interfejs dla administratorów
+- Skalowalność dla rosnącego biznesu
 
-```python
-import flask
-import flask_saml
+## Rozpocznij Współpracę
 
-app = flask.Flask(__name__)
+📚 **Dowiedz się więcej:**
 
-app.config.update({
-    'SECRET_KEY': 'soverysecret',
-    'SAML_METADATA_URL': 'https://mymetadata.xml',
-})
-flask_saml.FlaskSAML(app)
-```
+- [FAQ](faq.md) - Odpowiedzi na najczęściej zadawane pytania
+- [WordPress](wordpress/index.md) - Odkryj możliwości WordPress dla Twojego biznesu
+- [OctoberCMS](octobercms/index.md) - Zobacz, jak OctoberCMS może usprawnić Twoją firmę
+- [Wsparcie](support.md) - Poznaj nasz pakiet wsparcia technicznego
 
-## Sample layout
+## Skontaktuj się z Nami
 
-```bash
-├── docs
-│   ├── about.md
-│   └── index.md
-├── mkdocs.yml
-└── site
-    ├── 404.html
-    ├── about
-    │   └── search_index.json
-    ├── sitemap.xml
-    └── sitemap.xml.gz
+🤝 **Jesteśmy tu dla Ciebie:**
 
-```
+- ✉️ Email: [biuro@depcore.pl](mailto:biuro@depcore.pl)
+- 📱 Telefon: [+48 783 342 094](tel:+48783342094)
+- 📍 Adres: Powstańców Śląskich, 45-086 Opole
+
+## Gotowy na Rozwój?
+
+[Umów Bezpłatną Konsultację](https://depcore.pl/kontakt) i dowiedz się, jak możemy pomóc Twojemu biznesowi osiągnąć nowy poziom w internecie!
