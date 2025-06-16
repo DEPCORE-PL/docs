@@ -28,7 +28,7 @@
     You can include external assets of course, but be aware that it means the
     documentation may not work well offline.
   -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css'|url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/main.css'|url }}">
 
 
   
@@ -36,7 +36,7 @@
   {% endblock %}
   
   {% block scripts %}
-    <script src="{{ '/assets/js/main.js'|url }}"></script>
+    <script src="{{ 'assets/js/main.js'|url }}"></script>
     <!-- MkDocs Search -->
     {% if config.plugins | selectattr("search") %}
       <script>window.MkDocsSearch = { search_index_url: "{{ 'search/search_index.json' | url }}" };</script>
