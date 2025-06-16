@@ -10,6 +10,8 @@ import {
     initToggleButtons,
     setScrollPadding,
     initAccordions,
+    initTocActiveOnScroll,
+    initNavSectionFolding
 } from "./helper-functions";
 
 
@@ -58,7 +60,8 @@ domReady(function () {
         wrapper.appendChild(pre);
         wrapper.appendChild(button);
     });
-    
+    initTocActiveOnScroll();
+    initNavSectionFolding();
     // initToggleButtons();
     // initAccordions(".accordion-trigger");
     // setScrollPadding(siteHeader);

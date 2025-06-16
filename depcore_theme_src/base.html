@@ -30,7 +30,6 @@
   -->
   <link rel="stylesheet" href="{{ 'assets/css/main.css'|url }}">
 
-
   
   {% block extrahead %}
   {% endblock %}
@@ -81,14 +80,23 @@
         <aside class="current-contents">
           <div>
             <p class="overtitle">Contents</p>
-            <ul>
+            <ul id="toc-list">
               {% for toc_item in page.toc %}
-              <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-              {% for toc_item in toc_item.children %}
-              <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
-              {% endfor %}
+              <li>
+                <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+                {% if toc_item.children %}
+                <ul>
+                  {% for child in toc_item.children %}
+                  <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
               {% endfor %}
             </ul>
+            <script>
+
+            </script>
           </div>
         </aside>
       </div>
@@ -112,7 +120,6 @@
     </div>
   </main>
   {% include "partials/footer.html" %}
-
 </body>
 
 </html>

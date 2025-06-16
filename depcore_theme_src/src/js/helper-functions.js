@@ -188,3 +188,64 @@ export function countDownClock(number = 100, format = "seconds") {
             seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
     }
 }
+export function initTocActiveOnScroll(tocSelector = '#toc-list a', activeClass = 'active-toc', offset = 100) {
+    const tocLinks = document.querySelectorAll(tocSelector);
+    const headingAnchors = Array.from(tocLinks).map(link => {
+        const id = decodeURIComponent(link.getAttribute('href')).replace(/^#/, '');
+        return document.getElementById(id);
+    });
+
+    function onScroll() {
+        let activeIndex = -1;
+        for (let i = 0; i < headingAnchors.length; i++) {
+            const anchor = headingAnchors[i];
+            if (anchor && anchor.getBoundingClientRect().top <= offset && i < headingAnchors.length-1) {
+                activeIndex = i;
+            }
+        }
+        tocLinks.forEach((link, i) => {
+            if (i === activeIndex) {
+                link.classList.add(activeClass);
+            } else {
+                link.classList.remove(activeClass);
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
+
+export function initNavSectionFolding() {
+    document.querySelectorAll('.nav-section-title').forEach(title => {
+        title.addEventListener('click', (e) => {
+            const button = title.querySelector('.nav-fold-button');
+            const section = title.nextElementSibling;
+            const isExpanded = !section.classList.contains('folded');
+            
+            // Toggle the folded state
+            section.classList.toggle('folded');
+            
+            // Animate the arrow
+            if (button) {
+                button.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+                button.textContent = isExpanded ? '▶' : '▼';
+            }
+        });
+    });
+
+    // Initially expand active sections with animation
+    const activeItems = document.querySelectorAll('.active');
+    activeItems.forEach(activeItem => {
+        let parent = activeItem.closest('.nav-section');
+        while (parent) {
+            const button = parent.previousElementSibling && parent.previousElementSibling.querySelector('.nav-fold-button');
+            parent.classList.remove('folded');
+            if (button) {
+                button.textContent = '▼';
+                button.style.transform = 'rotate(90deg)';
+            }
+            parent = parent.parentElement && parent.parentElement.closest('.nav-section');
+        }
+    });
+}

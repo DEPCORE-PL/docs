@@ -1,14 +1,17 @@
 {% if not nav_item.children %}
 <li {% if nav_item.active %}class="active"{% endif %}>
-    <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+    <a href="{{ nav_item.url|url }}" {% if nav_item.active %}class="current"{% endif %}>{{ nav_item.title }}</a>
 </li>
 {% else %}
   <li>
-    {{ nav_item.title }}
-    <ul>
-        {% for nav_item in nav_item.children %}
-            {% include "nav.html" %}
-        {% endfor %}
+    <div class="nav-section-title">
+      <span class="nav-fold-button">{% if nav_item.active %}▼{% else %}▶{% endif %}</span>
+      {{ nav_item.title }}
+    </div>
+    <ul class="nav-section {% if not nav_item.active %}folded{% endif %}">
+      {% for nav_item in nav_item.children %}
+        {% include "nav.html" %}
+      {% endfor %}
     </ul>
   </li>
 {% endif %}
