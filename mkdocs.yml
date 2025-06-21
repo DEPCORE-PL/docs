@@ -22,3 +22,7 @@ plugins:
         - section: "YouTubeFeed Plugin"
           # you can define the edit uri path
           import_url: https://github.com/DEPCORE-PL/oc-youtubefeed-plugin
+          
+        - section: "Orphans Plugin"
+          # you can define the edit uri path
+          import_url: https://github.com/DEPCORE-PL/oc-orphans-plugin
