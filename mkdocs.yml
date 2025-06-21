@@ -18,3 +18,7 @@ plugins:
         - section: "PDFToolkit Plugin"
           # you can define the edit uri path
           import_url: https://github.com/DEPCORE-PL/oc-pdftoolkit-plugin
+          
+        - section: "YouTubeFeed Plugin"
+          # you can define the edit uri path
+          import_url: https://github.com/DEPCORE-PL/oc-youtubefeed-plugin
