@@ -2,17 +2,33 @@
     --headroom-translate: -200%;
     top: 0;
 
+    
     .inner {
+    
+    [role="search"] {
+            display: none
+    }
+    @media screen and (min-width: $size-mobile) {
+        [role="search"] {
+            display: block
+        }
+    }
+    @media (min-width: 120em) {
+        .mobile-navigator-toggle{
+            display: none;
+        }
+    }
+
         width: min(var(--size-container), var(--size-container-max));
         margin-inline: auto;
 
-        display: grid;
-        column-gap: var(--gap);
-        row-gap: var(--space-3xs);
-        grid-template-areas:
-            "brand top"
-            "brand nav";
-        grid-template-columns: min-content 1fr;
-        justify-items: end;
+        display: flex;
+        gap: var(--gap);
+        justify-items: start;
+
+        .logo{
+            flex-grow: 1;
+        }
     }
 }
+

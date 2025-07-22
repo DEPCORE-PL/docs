@@ -2,24 +2,17 @@ console.log(
     "%c This site has been created by DEPCORE | depcore.pl ",
     "background: #ffe400; color: #121212; padding: 30px 20px"
 );
-// import Headroom from "headroom.js";
+import Headroom from "headroom.js";
 import hljs from "highlight.js"
 
 import {
-    initThemeSwitch,
-    initToggleButtons,
     setScrollPadding,
-    initAccordions,
     initTocActiveOnScroll,
     initNavSectionFolding
 } from "./helper-functions";
 
 
 
-const siteHeader = document.getElementById("masthead");
-
-// let headroom = new Headroom(document.querySelector(".site-header"));
-// headroom.init();
 
 const domReady = function (callback) {
     if (
@@ -35,7 +28,16 @@ const domReady = function (callback) {
 let delayTimer = 1000;
 
 domReady(function () {
- document.querySelectorAll('pre code').forEach((codeBlock) => {
+    const navigator = document.getElementsByClassName("navigator")[0];
+    document.querySelector('.mobile-navigator-toggle').addEventListener("click", ()=>{
+        navigator.classList.toggle("open")
+    })
+    const siteHeader = document.getElementById("masthead");
+
+    let headroom = new Headroom(siteHeader);
+    headroom.init();
+
+    document.querySelectorAll('pre code').forEach((codeBlock) => {
         hljs.highlightElement(codeBlock);
 
         const pre = codeBlock.closest('pre');
@@ -64,6 +66,6 @@ domReady(function () {
     initNavSectionFolding();
     // initToggleButtons();
     // initAccordions(".accordion-trigger");
-    // setScrollPadding(siteHeader);
+    setScrollPadding(siteHeader);
     // initThemeSwitch();
 });

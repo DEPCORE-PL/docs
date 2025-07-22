@@ -1,28 +1,31 @@
 <header class="site-header" id="masthead">
 	<div class="inner">
 		{% include 'partials/logo.html' %}
-		<div class="toggable">
-			<nav class="main-navigation">
-				<ul>
-					<li>
-						<div role="search">
-							<form action="{{ 'search.html'|url }}" method="get">
-								<input type="search" name="q" placeholder="Search docs" />
-							</form>
-						</div>
-					</li>
-					<li>
-						<div class="hidden">
-							{% if page and page.edit_url %}
-								<a href="{{ page.edit_url }}">{{ config.repo_name }}</a>
-							{% elif config.repo_url %}
-								<a href="{{ config.repo_url }}">edit</a>
-							{% endif %}
-						</div>
-						
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<nav class="main-navigation">
+			<ul>
+				<li>
+					<div role="search">
+						<form action="{{ 'search.html'|url }}" method="get">
+							<input type="search" name="q" placeholder="Search docs" />
+						</form>
+					</div>
+				</li>
+				<li>
+					<button type="button" class="mobile-navigator-toggle">
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroked-icon"><path d="M6 11H23.5" class="top-line" stroke-width="1.5"></path><path d="M6 15.5H23.5" class="middle-line" stroke-width="1.5"></path><path d="M6 20H23.5" class="bottom-line" stroke-width="1.5"></path></svg>
+					</button>
+				</li>
+				<li>
+					<div class="hidden">
+						{% if page and page.edit_url %}
+							<a href="{{ page.edit_url }}">{{ config.repo_name }}</a>
+						{% elif config.repo_url %}
+							<a href="{{ config.repo_url }}">edit</a>
+						{% endif %}
+					</div>
+					
+				</li>
+			</ul>
+		</nav>
 	</div>
 </header>

@@ -54,7 +54,6 @@ nav {
         }
     }
 
-    @media screen and (min-width: $size-mobile) {
         --o: 0;
         --ts: 200ms;
         --tda: 300ms;
@@ -82,27 +81,6 @@ nav {
             border: 3px solid var(--c-text);
             transition-delay: var(--tdm);
             z-index: 900;
-
-            // &::after,
-            // &::before {
-            //     transition: opacity var(--ts) ease-in-out;
-            //     opacity: var(--o);
-            //     content: "";
-            //     position: absolute;
-            //     bottom: -30px;
-            //     right: 5px;
-            //     border-radius: 50%;
-            //     aspect-ratio: 1;
-            //     width: var(--w, 20px);
-            //     background-color: var(--c-text);
-            //     transition: opacity var(--td-menu-transform) ease-in-out;
-            //     transition-delay: var(--tdb);
-            // }
-            // &::after {
-            //     transition-delay: var(--tda);
-            //     --w: 10px;
-            //     bottom: -43px;
-            // }
         }
 
         .top-level {
@@ -145,7 +123,7 @@ nav {
                 }
             }
         }
-    }
+    
 } // main navigation ends
 
 nav.pages {

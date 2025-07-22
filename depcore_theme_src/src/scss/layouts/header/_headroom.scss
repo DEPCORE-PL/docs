@@ -6,14 +6,12 @@
     transform: translateY( var(--headroom-translate));
 }
 
-.headroom--not-top.headroom--pinned {
+.headroom--top.headroom--pinned {
     --headroom-translate: 10px;
 }
 
-.headroom--unpinned {
+.headroom--unpinned, .headroom--pinned {
     --headroom-translate: -100%;
-    .main-navigation{display: none;}
-
 }
 
 .top-bar{
