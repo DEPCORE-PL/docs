@@ -6,6 +6,9 @@ theme:
   custom_dir: 'depcore_theme'
   include_search_page: true
   locale: en
+  
+markdown_extensions: 
+  - "pymdownx.superfences"
 
 plugins:
   - search
