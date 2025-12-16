@@ -1,6 +1,6 @@
 setup:
 	cd depcore_theme_src && yarn
-	pip install mkdocs mkdocs-multirepo-plugin
+	pip install mkdocs mkdocs-multirepo-plugin pymdown-extensions
 
 develop:
 	npx -y concurrently \
