@@ -32,4 +32,4 @@ plugins:
 
         - section: "AltTextAi Plugin"
           # you can define the edit uri path
-          import_url: https://github.com/DEPCORE-PL/oc-alttextai-plugin?branch=main
+          import_url: https://github.com/DEPCORE-PL/oc-alttextai-plugin
